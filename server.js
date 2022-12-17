@@ -22,6 +22,9 @@ io.on("connection", (socket) => {
 
 // Create peer server
 ExpressPeerServer(http, { path: "/" });
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
 
 // Routes
 app.use("/api", require("./routes/authRouter"));
