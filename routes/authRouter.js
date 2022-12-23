@@ -9,5 +9,7 @@ router.post('/logout', authCtrl.logout)
 
 router.post('/refresh_token', authCtrl.generateAccessToken)
 
+router.post('/chatbot', authCtrl.chatBot)
+
 
 module.exports = router

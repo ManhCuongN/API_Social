@@ -1,8 +1,33 @@
 const Users = require("../models/userModel");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+var OPENAI = require("openai");
+var {Configuration, OpenAIApi} = OPENAI;
 
 const authCtrl = {
+  chatBot:  async(req, res) => {    
+    var configuration = new Configuration ({
+       organization: "org-lY0wtqpy5QI6k8FqjWYgveKR",
+       apiKey: "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"
+    })
+    
+    var openai = new OpenAIApi(configuration);
+        const {message} = req.body
+        const resP = await openai.listEngines()
+        const response = await openai.createCompletion({
+          model: "text-davinci-003",
+          prompt: `${message}`,
+          max_tokens: 1000,
+          temperature: 0,
+        });
+        if(response.data.choices[0].text) {
+          res.json({
+          message: response.data.choices[0].text
+        })
+        }
+        
+      },
+
   register: async (req, res) => {
     try {
       const { fullname, username, email, password, gender } = req.body;
