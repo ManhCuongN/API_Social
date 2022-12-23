@@ -6,9 +6,14 @@ const cookieParser = require("cookie-parser");
 const SocketServer = require("./socketServer");
 const { ExpressPeerServer } = require("peer");
 const path = require("path");
-
+const corsOptions ={
+  origin:'https://apisocial-production.up.railway.app', 
+  credentials:true,            //access-control-allow-credentials:true
+  optionSuccessStatus:200
+}
 const app = express();
-app.use(cors());
+app.use(cors(corsOptions));
+
 app.use(cookieParser());
 app.use(express.json());
 
