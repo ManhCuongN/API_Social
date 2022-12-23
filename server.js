@@ -7,7 +7,7 @@ const SocketServer = require("./socketServer");
 const { ExpressPeerServer } = require("peer");
 const path = require("path");
 const corsOptions ={
-  origin:'https://apisocial-production.up.railway.app', 
+  origin:'http://localhost:3000', 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }
