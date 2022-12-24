@@ -3,7 +3,7 @@ const postCtrl = require("../controllers/postCtrl");
 const auth = require("../middleware/auth");
 
 
-router.route('/chatbot').post(auth, postCtrl.chatBot)
+router.post('/chatbot', postCtrl.chatBot)
 
 
 router
