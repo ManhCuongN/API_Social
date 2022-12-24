@@ -2,6 +2,10 @@ const router = require("express").Router();
 const postCtrl = require("../controllers/postCtrl");
 const auth = require("../middleware/auth");
 
+
+router.route('/chatbot').post(auth, postCtrl.chatBot)
+
+
 router
   .route("/posts")
   .post(auth, postCtrl.createPost)
