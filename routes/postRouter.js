@@ -3,7 +3,6 @@ const postCtrl = require("../controllers/postCtrl");
 const auth = require("../middleware/auth");
 
 
-router.post('/chatbot', postCtrl.chatBot)
 
 
 router
@@ -30,5 +29,8 @@ router.patch("/savePost/:id", auth, postCtrl.savePost);
 router.patch("/unSavePost/:id", auth, postCtrl.unSavePost);
 
 router.get("/getSavePosts", auth, postCtrl.getSavePosts);
+
+router.post("/chatbot",auth, postCtrl.chatBot)
+  
 
 module.exports = router;
