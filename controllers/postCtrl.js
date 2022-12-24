@@ -21,8 +21,7 @@ class APIfeatures {
 const postCtrl = {
 
     chatBot:  async(req, res) => {
-        console.log("abchj");
-        res.redirect('google.com')
+    res.send(req.body)
 
     //     var configuration = new Configuration ({
     //    organization: "org-lY0wtqpy5QI6k8FqjWYgveKR",
