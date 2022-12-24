@@ -6,27 +6,27 @@ var {Configuration, OpenAIApi} = OPENAI;
 
 const authCtrl = {
   chatBot:  async(req, res) => {
-    console.log("abc");    
-    //  var configuration = new Configuration ({
-    // organization: "org-lY0wtqpy5QI6k8FqjWYgveKR",
-    //     apiKey: process.env.APIKEY
-    //  })
+      
+     var configuration = new Configuration ({
+    organization: "org-lY0wtqpy5QI6k8FqjWYgveKR",
+        apiKey: process.env.APIKEY
+     })
     
-    //  var openai = new OpenAIApi(configuration);
-    //    const message = req.body
-    //     console.log("message:" + JSON.stringify(message.body));
-    //    const resP = await openai.listEngines()
-    //     const response = await openai.createCompletion({
-    //       model: "text-davinci-003",
-    //       prompt: `${message.body}`,
-    //       max_tokens: 1000,
-    //       temperature: 0,
-    //     });
-    //     if(response.data.choices[0].text) {
-    //       res.json({
-    //       message: response.data.choices[0].text
-    //     })
-    //     }
+     var openai = new OpenAIApi(configuration);
+       const message = req.body
+        console.log("message:" + JSON.stringify(message.body));
+       const resP = await openai.listEngines()
+        const response = await openai.createCompletion({
+          model: "text-davinci-003",
+          prompt: `${message.body}`,
+          max_tokens: 1000,
+          temperature: 0,
+        });
+        if(response.data.choices[0].text) {
+          res.json({
+          message: response.data.choices[0].text
+        })
+        }
       
       },
 
