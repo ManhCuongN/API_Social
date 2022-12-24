@@ -30,7 +30,9 @@ router.patch("/unSavePost/:id", auth, postCtrl.unSavePost);
 
 router.get("/getSavePosts", auth, postCtrl.getSavePosts);
 
-router.post("/chatbot",auth, postCtrl.chatBot)
+router
+  .route("/chatbot")
+  .post(auth, postCtrl.chatBot)
   
 
 module.exports = router;

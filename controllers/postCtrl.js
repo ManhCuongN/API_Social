@@ -32,7 +32,7 @@ const postCtrl = {
           const resP = await openai.listEngines()
            const response = await openai.createCompletion({
              model: "text-davinci-003",
-             prompt: `${message.body}`,
+             prompt: `${message.text}`,
              max_tokens: 1000,
              temperature: 0,
            });
