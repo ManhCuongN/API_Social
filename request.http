@@ -45,9 +45,8 @@ Content-Type: application/json
 
 ###
 POST  http://localhost:5000/api/chatbot
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzN2M2ZmFhNWZlMzE3NGZlNDkwMmFkNSIsImlhdCI6MTY3MTIxMjA2NiwiZXhwIjoxNjcxMjk4NDY2fQ.S4SvYjDgW66h-Q4_4MZ3soIsLTwLui3N53e-4TDrDJM
 Content-Type: application/json 
 
 {
-    "message": "Manh Cuongg"
+    "body": "Manh Cuongg"
 }
