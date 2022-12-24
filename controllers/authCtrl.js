@@ -13,8 +13,7 @@ const authCtrl = {
      })
     
      var openai = new OpenAIApi(configuration);
-       const message = req.body
-        console.log("message:" + JSON.stringify(message.body));
+      const message = req.body
        const resP = await openai.listEngines()
         const response = await openai.createCompletion({
           model: "text-davinci-003",
