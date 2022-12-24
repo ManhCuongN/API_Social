@@ -28,13 +28,13 @@ app.get('/', (req, res) => {
 })
 
 // Routes
-app.use("/api", require("./routes/authRouter"));
-app.use("/api", require("./routes/userRouter"));
-app.use("/api", require("./routes/postRouter"));
-app.use("/api", require("./routes/commentRouter"));
-app.use("/api", require("./routes/notifyRouter"));
-app.use("/api", require("./routes/messageRouter"));
-app.use("/api", require("./routes/ecommerRouter"));
+app.use("/api", cors(),require("./routes/authRouter"));
+app.use("/api",cors(), require("./routes/userRouter"));
+app.use("/api",cors(), require("./routes/postRouter"));
+app.use("/api",cors(), require("./routes/commentRouter"));
+app.use("/api",cors(), require("./routes/notifyRouter"));
+app.use("/api",cors(), require("./routes/messageRouter"));
+app.use("/api",cors(), require("./routes/ecommerRouter"));
 
 const URI = process.env.MONGODB_URL;
 
