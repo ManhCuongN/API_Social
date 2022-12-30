@@ -23,12 +23,12 @@ const postCtrl = {
     chatBot:  async(req, res) => {
       
         var configuration = new Configuration ({
-       organization: "org-lY0wtqpy5QI6k8FqjWYgveKR",
+           organization: "org-lY0wtqpy5QI6k8FqjWYgveKR",
            apiKey: process.env.APIKEY
         })
        
-        var openai = new OpenAIApi(configuration);
-         const message = req.body
+          var openai = new OpenAIApi(configuration);
+          const message = req.body
           const resP = await openai.listEngines()
            const response = await openai.createCompletion({
              model: "text-davinci-003",
