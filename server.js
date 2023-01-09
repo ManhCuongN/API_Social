@@ -17,7 +17,7 @@ app.use(cookieParser());
 app.use(express.json());
 
 // Socket
-const http = require("http").createServer(app);
+const http = require("https").createServer(app);
 const io = require("socket.io")(http);
 
 io.on("connection", (socket) => {
@@ -65,7 +65,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
-const port = process.env.PORT || 5000 || process.env.API_PORT;
+const port = process.env.PORT || 5000 ;
 http.listen(port, () => {
   console.log("Server is running on port", port);
 });
