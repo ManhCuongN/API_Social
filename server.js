@@ -18,10 +18,7 @@ app.use(express.json());
 
 // Socket
 const httpsocket = require("http").createServer(app);
-const io = require("socket.io")(httpsocket,{
-  cors: {
-      origin: "*",
-  }});
+const io = require("socket.io")(httpsocket);
 
 io.on("connection", (socket) => {
   SocketServer(socket);
