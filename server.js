@@ -17,8 +17,8 @@ app.use(cookieParser());
 app.use(express.json());
 
 // Socket
-const http = require("http").createServer(app);
-const io = require("socket.io")(http,{
+const httpsocket = require("http").createServer(app);
+const io = require("socket.io")(httpsocket,{
   cors: {
       origin: "*",
   }});
