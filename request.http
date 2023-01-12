@@ -51,3 +51,9 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzN2M2ZmFhNWZlMzE3
 {
     "text": "Manh Cuongg"
 }
+
+###
+
+POST http://localhost:5000/socket.io/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzN2M2ZmFhNWZlMzE3NGZlNDkwMmFkNSIsImlhdCI6MTY3MzI4MDcxMiwiZXhwIjoxNjczMzY3MTEyfQ.JHLIHJonn7DO1wHW-I7CoZdFWi47C7o_CyQRuZTBL64
+Content-Type: application/json
